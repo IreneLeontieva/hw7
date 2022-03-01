@@ -30,8 +30,7 @@ public class WebSteps {
     @Step("Search for the repo {searchRepo}")
     public void searchRepo(String repo) {
         $(".header-search-input").click();
-        $(".header-search-input").sendKeys(repo);
-        $(".header-search-input").submit();
+        $(".header-search-input").setValue(repo).pressEnter();
     }
 
     @Step("Go the repo {searchRepo}")
