@@ -30,8 +30,7 @@ public class WebSteps {
     @Step("Search for the repo {searchRepo}")
     public void searchRepo(String repo) {
         $(".header-search-input").click();
-        $(".header-search-input").sendKeys(repo);
-        $(".header-search-input").submit();
+        $(".header-search-input").setValue(repo).pressEnter();
     }
 
     @Step("Go the repo {searchRepo}")
@@ -46,7 +45,7 @@ public class WebSteps {
 
     @Step("Check issue with number #{number}")
     public void goToIssueNumber(int number) {
-        $(withText("#" + number)).should(Condition.exist);
+        $(withText("#" + number)).should(Condition.visible);
     }
 
     @Attachment(value = "Screenshot", type = "image/png", fileExtension = "png")

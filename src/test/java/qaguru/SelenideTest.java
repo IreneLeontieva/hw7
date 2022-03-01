@@ -23,12 +23,11 @@ public class SelenideTest {
         open(URL);
 
         $(".header-search-input").click();
-        $(".header-search-input").sendKeys(REPOSITORY);
-        $(".header-search-input").submit();
+        $(".header-search-input").setValue(REPOSITORY).pressEnter();
 
         $(By.linkText(REPOSITORY)).click();
         $(By.partialLinkText("Issues")).click();
-        $(withText("#"+ISSUE_NUMBER)).should(Condition.exist);
+        $(withText("#" + ISSUE_NUMBER)).should(Condition.visible);
     }
 
 }

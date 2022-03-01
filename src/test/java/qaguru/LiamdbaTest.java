@@ -27,8 +27,7 @@ public class LiamdbaTest {
 
         step("Search for " + REPOSITORY, () -> {
             $(".header-search-input").click();
-            $(".header-search-input").sendKeys(REPOSITORY);
-            $(".header-search-input").submit();
+            $(".header-search-input").setValue(REPOSITORY).pressEnter();
         });
 
         step("Go to " + REPOSITORY, () -> {
@@ -40,7 +39,7 @@ public class LiamdbaTest {
         });
 
         step("Check issue with number " + ISSUE_NUMBER, () -> {
-            $(withText("#" + ISSUE_NUMBER)).should(Condition.exist);
+            $(withText("#" + ISSUE_NUMBER)).should(Condition.visible);
         });
     }
 
