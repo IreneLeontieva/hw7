@@ -40,7 +40,7 @@ public class LiamdbaTest {
         });
 
         step("Check issue with number " + ISSUE_NUMBER, () -> {
-            $(withText("#" + ISSUE_NUMBER)).should(Condition.exist);
+            $(withText("#" + ISSUE_NUMBER)).should(Condition.visible);
         });
     }
 

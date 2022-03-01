@@ -46,7 +46,7 @@ public class WebSteps {
 
     @Step("Check issue with number #{number}")
     public void goToIssueNumber(int number) {
-        $(withText("#" + number)).should(Condition.exist);
+        $(withText("#" + number)).should(Condition.visible);
     }
 
     @Attachment(value = "Screenshot", type = "image/png", fileExtension = "png")
