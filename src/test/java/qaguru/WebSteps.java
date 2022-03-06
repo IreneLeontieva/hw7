@@ -35,6 +35,7 @@ public class WebSteps {
         $(".header-search-input").setValue(repo).pressEnter();
     }
 
+    //открыла репо
     @Step("Go the repo {searchRepo}")
     public void goToRepo(String repo) {
         $(By.linkText(repo)).click();
