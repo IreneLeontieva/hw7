@@ -33,7 +33,7 @@ public class WebSteps {
         $(".header-search-input").setValue(repo).pressEnter();
     }
 
-    @Step("111Go the repo {searchRepo}")
+    @Step("111Go 22the repo {searchRepo}")
     public void goToRepo(String repo) {
         $(By.linkText(repo)).click();
     }
