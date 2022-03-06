@@ -22,6 +22,7 @@ public class WebSteps {
     private static final String REPOSITORY = "IreneLeontieva/hw7";
     private static final int ISSUE_NUMBER = 1;
 
+    //1st comment
     @Step("Open main page {mainPage}")
     public void openMainPage(String mainPage) {
         open(mainPage);
