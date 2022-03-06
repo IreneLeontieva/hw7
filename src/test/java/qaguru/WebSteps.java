@@ -28,6 +28,7 @@ public class WebSteps {
         open(mainPage);
     }
 
+    //2st comment
     @Step("Search for the repo {searchRepo}")
     public void searchRepo(String repo) {
         $(".header-search-input").click();
